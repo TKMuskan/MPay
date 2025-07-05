@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPay</title>
+    <link rel="shortcut icon" href="image/fav-2.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Poppins Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        .poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extraLight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extraLight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="flex justify-center">
+            <div class="mockup-phone border-[#fc039c]">
+                <div class="mockup-phone-camera"></div>
+                <div class="mockup-phone-display bg-white">
+                  <!-- Header -->
+            <section class="container mx-8 w-auto mt-3 flex justify-between items-center">
+              <div class="flex justify-center items-center"><p class="text-sm text-center poppins-semibold mt-1">9:41</p></div>
+              <div class="flex justify-center items-center gap-3">
+                <img class="w-5 h-3" src="image/signal-status.png" alt="" />
+                <img class="w-4 h-4" src="image/wifi-signal.png" alt="" />
+                <img class="w-5 h-5" src="image/full-battery.png" alt="" />
+              </div>
+            </section>
+                      <div class="flex justify-center items-center py-10">
+                        <img src="image/logo.png" class="h-36 w-36 mt-8" alt="">
+                    </div>
+                    <div class="hero mt-10">
+                        <div class="">
+                            <div class="card bg-base-100 w-72 drop-shadow-2xl drop-shadow-gray-200">
+                                <div id="alertBox3"></div>
+                                <div class="card-body">
+                                    <fieldset class="fieldset">
+                                        <label class="label text-[#fc039c] poppins-semibold">Phone Number</label>
+                                        <input id="phone-number" type="text"
+                                            class="input text-xs poppins-regular-italic focus:outline-none focus:border-2"
+                                            placeholder="Enter your phone number" />
+                                        <div id="alertBox"></div>
+                                        <label class="label text-[#fc039c] poppins-semibold">Pin</label>
+                                        <input id="pin" type="password" class="input text-xs poppins-regular-italic focus:outline-none focus:border-2"
+                                            placeholder="Enter your pin" />
+                                        <div id="alertBox2"></div>
+                                        <div><a class="link link-hover hover:text-blue-600 poppins-regular text-zinc-600">Forgot password?</a></div>
+                                        <button id="btn-login"
+                                            class="btn btn-neutral mt-4 hover:bg-[#fc039c] border-none">Login</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
