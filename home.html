@@ -165,10 +165,12 @@
               </div>
             </div>
             <div class="">
-              <button class="flex gap-2 justify-end items-center btn btn-sm">
-                <p class="text-xs poppins-regular">Log Out</p>
-                <img class="h-5 w-5" src="image/log-out.png" alt="" />
-              </button>
+              <a href="./index.html">
+                <button class="flex gap-2 justify-end items-center btn btn-sm bg-transparent hover:text-[#fc039c] hover:poppins-extra">
+                  <p class="text-xs">Log Out</p>
+                  <img class="h-5 w-5" src="image/log-out.png" alt="" />
+                </button>
+              </a>
             </div>
           </div>
         </header>
@@ -178,7 +180,7 @@
         <!-- <div class="divider divider-neutral opacity-5 shadow-lg"></div> -->
         <main class="container mx-4 w-auto pt-10">
           <!-- 1st Section -->
-          <section class="">
+          <section>
             <div class="space-y-4">
               <div class="flex justify-start items-center gap-3">
                 <img class="h-8 w-8" src="image/glitter.png" alt="" />
@@ -191,12 +193,14 @@
               </p>
             </div>
             <div class="grid grid-cols-3 gap-5 py-6">
-              <div
-                class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
-                <div class="flex justify-center items-center"><img class="h-8 w-8" src="image/add-money.png" alt="">
+              <a href="./addMoney.html">
+                <div
+                  class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
+                  <div class="flex justify-center items-center"><img class="h-8 w-8" src="image/add-money.png" alt="">
+                  </div>
+                  <p class="text-sm poppins-regular text-center">Add Money</p>
                 </div>
-                <p class="text-sm poppins-regular text-center">Add Money</p>
-              </div>
+              </a>
               <div
                 class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
                 <div class="flex justify-center items-center"><img class="h-8 w-8" src="image/cash-out.png" alt="">
@@ -227,13 +231,13 @@
             </div>
           </section>
           <!-- 2nd Section -->
-          <section class="">
+          <section>
             <div>
               <h2 class="pb-3 text-md poppins-semibold tracking-wide">Recent Transaction</h2>
               <p id="btn-view"></p>
             </div>
             <ul class="space-y-2 list bg-base-100">
-              <!-- Work on=============================================================================================== -->
+              <!-- Working on=============================================================================================== -->
               <!-- ============================================================================================ -->
               <li class="list-row border border-pink-300 rounded-xl shadow-md">
                 <div class="flex justify-center items-center"><img class="size-7 " src="image/file.png" />
@@ -265,6 +269,8 @@
                   </div>
                 </dialog>
               </li>
+
+              <!-- View all button -->
               <li class="list-row flex justify-center items-center -mt-2">
                 <a href="./transaction.html" class="">
                   <p class="poppins-medium text-xs">View All</p>
