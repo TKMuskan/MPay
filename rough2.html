@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phone Modal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.0/dist/full.css" rel="stylesheet" />
+  <style>
+    .modal-backdrop {
+      backdrop-filter: blur(6px);
+    }
+  </style>
+</head>
+<body class="flex justify-center items-center h-screen bg-base-200">
+
+  <!-- Phone Mockup -->
+  <div class="mockup-phone border-primary">
+    <div class="camera"></div>
+    <div class="display">
+      <div class="artboard artboard-demo phone-1 bg-white flex flex-col justify-center items-center gap-4">
+
+        <!-- Image Button -->
+        <button class="btn btn-circle btn-outline" onclick="document.getElementById('phone_modal').showModal()">
+          <img src="./image/details.png" alt="icon" class="rounded-full" />
+        </button>
+
+        <!-- Modal inside phone -->
+        <dialog id="phone_modal" class="modal modal-backdrop">
+          <div class="modal-box">
+            <h3 class="font-bold text-lg">Modal Inside Phone</h3>
+            <p class="py-4">This modal appears within the phone display.</p>
+            <div class="modal-action">
+              <form method="dialog">
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

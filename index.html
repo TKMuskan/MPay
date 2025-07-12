@@ -151,11 +151,11 @@
                                         <label class="label text-[#fc039c] poppins-semibold">Phone Number</label>
                                         <input id="phone-number" type="text"
                                             class="input text-xs poppins-regular-italic focus:outline-none focus:border-2"
-                                            placeholder="Enter your phone number" />
+                                            placeholder="Enter your phone number" required pattern="[0-9]" />
                                         <div id="alertBox"></div>
                                         <label class="label text-[#fc039c] poppins-semibold">Pin</label>
                                         <input id="pin" type="password" class="input text-xs poppins-regular-italic focus:outline-none focus:border-2"
-                                            placeholder="Enter your pin" />
+                                            placeholder="Enter your pin" minlength="4" maxlength="4" required />
                                         <div id="alertBox2"></div>
                                         <div><a class="link link-hover hover:text-blue-600 poppins-regular text-zinc-600">Forgot password?</a></div>
                                         <button id="btn-login"

@@ -1,224 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MPay</title>
-    <link rel="shortcut icon" href="image/fav-2.png" type="image/x-icon" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Poppins Font Link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      .poppins-thin {
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-        font-style: normal;
-      }
 
-      .poppins-extraLight {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: normal;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MPay</title>
+  <link rel="shortcut icon" href="image/fav-2.png" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Poppins Font Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <style>
+    .modal-backdrop {
+      backdrop-filter: blur(6px);
+    }
 
-      .poppins-light {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-      }
+    .poppins-thin {
+      font-family: "Poppins", sans-serif;
+      font-weight: 100;
+      font-style: normal;
+    }
 
-      .poppins-regular {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
+    .poppins-extraLight {
+      font-family: "Poppins", sans-serif;
+      font-weight: 200;
+      font-style: normal;
+    }
 
-      .poppins-medium {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-      }
+    .poppins-light {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
 
-      .poppins-semibold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-      }
+    .poppins-regular {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
 
-      .poppins-bold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-      }
+    .poppins-medium {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
 
-      .poppins-extrabold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        font-style: normal;
-      }
+    .poppins-semibold {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+    }
 
-      .poppins-black {
-        font-family: "Poppins", sans-serif;
-        font-weight: 900;
-        font-style: normal;
-      }
+    .poppins-bold {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
 
-      .poppins-thin-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-        font-style: italic;
-      }
+    .poppins-extrabold {
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+    }
 
-      .poppins-extraLight-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: italic;
-      }
+    .poppins-black {
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
 
-      .poppins-light-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-style: italic;
-      }
+    .poppins-thin-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 100;
+      font-style: italic;
+    }
 
-      .poppins-regular-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: italic;
-      }
+    .poppins-extraLight-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 200;
+      font-style: italic;
+    }
 
-      .poppins-medium-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: italic;
-      }
+    .poppins-light-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-style: italic;
+    }
 
-      .poppins-semibold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: italic;
-      }
+    .poppins-regular-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: italic;
+    }
 
-      .poppins-bold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: italic;
-      }
+    .poppins-medium-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: italic;
+    }
 
-      .poppins-extrabold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        font-style: italic;
-      }
+    .poppins-semibold-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: italic;
+    }
 
-      .poppins-black-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 900;
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="flex justify-center">
-      <div class="mockup-phone border-[#fc039c]">
-        <div class="mockup-phone-camera"></div>
-        <div class="mockup-phone-display bg-white">
-          <!-- mockup icons head -->
-          <section
-            class="container mx-8 w-auto mt-3 flex justify-between items-center"
-          >
-            <div class="flex justify-center items-center">
-              <p class="text-sm text-center poppins-semibold mt-1">9:41</p>
-            </div>
-            <div class="flex justify-center items-center gap-3">
-              <img class="w-5 h-3" src="image/signal-status.png" alt="" />
-              <img class="w-4 h-4" src="image/wifi-signal.png" alt="" />
-              <img class="w-5 h-5" src="image/full-battery.png" alt="" />
-            </div>
-          </section>
-          <!-- header -->
-          <header class="container mx-4 w-auto mt-10">
-            <div class="flex justify-between items-center">
-              <div class="flex justify-between items-center gap-8">
-                <div class="flex justify-start items-center">
-                  <img class="h-12 w-12" src="image/logo.png" alt="" />
-                </div>
-                <div class="space-y-1">
-                  <div class="flex justify-start items-center gap-1">
-                    <p class="poppins-semibold">$</p>
-                    <div class="stat-value poppins-semibold text-base">
-                      89,400
-                    </div>
-                  </div>
-                  <div class="stat-desc poppins-regular text-[0.7rem]">
-                    Available balance
+    .poppins-bold-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    .poppins-extrabold-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
+      font-style: italic;
+    }
+
+    .poppins-black-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex justify-center">
+    <div class="mockup-phone border-[#fc039c]">
+      <div class="mockup-phone-camera"></div>
+      <div class="mockup-phone-display bg-white relative overflow-hidden">
+        <!-- mockup icons head -->
+        <section class="container mx-8 w-auto mt-3 flex justify-between items-center">
+          <div class="flex justify-center items-center">
+            <p class="text-sm text-center poppins-semibold mt-1">9:41</p>
+          </div>
+          <div class="flex justify-center items-center gap-3">
+            <img class="w-5 h-3" src="image/signal-status.png" alt="" />
+            <img class="w-4 h-4" src="image/wifi-signal.png" alt="" />
+            <img class="w-5 h-5" src="image/full-battery.png" alt="" />
+          </div>
+        </section>
+        <!-- header -->
+        <header class="container mx-4 w-auto mt-10">
+          <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center gap-8">
+              <div class="flex justify-start items-center">
+                <img class="h-12 w-12" src="image/logo.png" alt="" />
+              </div>
+              <div class="space-y-1">
+                <div class="flex justify-start items-center gap-1">
+                  <p class="poppins-semibold">$</p>
+                  <div class="stat-value poppins-semibold text-base">
+                    89,400
                   </div>
                 </div>
-              </div>
-              <div class="">
-                <button class="flex gap-2 justify-end items-center btn btn-sm">
-                  <p class="text-xs poppins-regular">Log Out</p>
-                  <img class="h-5 w-5" src="image/log-out.png" alt="" />
-                </button>
+                <div class="stat-desc poppins-regular text-[0.7rem]">
+                  Available balance
+                </div>
               </div>
             </div>
-          </header>
-          <div class="pt-5 text-gray-200 shadow-lg opacity-35"><hr /></div>
-          <!-- <div class="divider divider-neutral opacity-5 shadow-lg"></div> -->
-          <main class="container mx-4 w-auto pt-10">
-            <section class="">
-              <div class="space-y-4">
-                <div class="flex justify-start items-center gap-3">
-                  <img class="h-8 w-8" src="image/stars.png" alt="" />
-                  <h1 class="text-2xl poppins-semibold text-[#080808]">
-                    Welcome to MPay
-                  </h1>
-                </div>
-                <p class="text-xs poppins-regular text-zinc-500">
-                  All-in-one banking. Fast, secure, worldwide.
-                </p>
+            <div class="">
+              <button class="flex gap-2 justify-end items-center btn btn-sm">
+                <p class="text-xs poppins-regular">Log Out</p>
+                <img class="h-5 w-5" src="image/log-out.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </header>
+        <div class="pt-5 text-gray-200 shadow-lg opacity-35">
+          <hr />
+        </div>
+        <!-- <div class="divider divider-neutral opacity-5 shadow-lg"></div> -->
+        <main class="container mx-4 w-auto pt-10">
+          <!-- 1st Section -->
+          <section class="">
+            <div class="space-y-4">
+              <div class="flex justify-start items-center gap-3">
+                <img class="h-8 w-8" src="image/glitter.png" alt="" />
+                <h1 class="text-2xl poppins-semibold text-[#080808]">
+                  Welcome to MPay
+                </h1>
               </div>
-              <div class="grid grid-cols-3 gap-5 py-6">
-              <div class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
-                <div class="flex justify-center items-center"><img class="h-8 w-8" src="image/add-money.png" alt=""></div>
+              <p class="text-xs poppins-regular text-zinc-500">
+                All-in-one banking. Fast, secure, worldwide.
+              </p>
+            </div>
+            <div class="grid grid-cols-3 gap-5 py-6">
+              <div
+                class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
+                <div class="flex justify-center items-center"><img class="h-8 w-8" src="image/add-money.png" alt="">
+                </div>
                 <p class="text-sm poppins-regular text-center">Add Money</p>
               </div>
-              <div class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
-                <div class="flex justify-center items-center"><img class="h-8 w-8" src="image/cash-out.png" alt=""></div>
+              <div
+                class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
+                <div class="flex justify-center items-center"><img class="h-8 w-8" src="image/cash-out.png" alt="">
+                </div>
                 <p class="text-sm poppins-regular text-center">CashOut</p>
               </div>
-              <div class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
+              <div
+                class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
                 <div class="flex justify-center items-center"><img class="h-8 w-8" src="image/send.png" alt=""></div>
                 <p class="text-sm poppins-regular text-center">Send</p>
               </div>
-              <div class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
+              <div
+                class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
                 <div class="flex justify-center items-center"><img class="h-8 w-8" src="image/bonuses.png" alt=""></div>
                 <p class="text-sm poppins-regular text-center">Bonus</p>
               </div>
-              <div class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
+              <div
+                class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
                 <div class="flex justify-center items-center"><img class="h-8 w-8" src="image/pay.png" alt=""></div>
                 <p class="text-sm poppins-regular text-center">Pay Bill</p>
               </div>
-              <div class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
-                <div class="flex justify-center items-center"><img class="h-8 w-8" src="image/transfer.png" alt=""></div>
+              <div
+                class="space-y-2 border rounded-xl border-pink-300 p-3 shadow-xl hover:bg-pink-100 hover:text-black hover:border-none">
+                <div class="flex justify-center items-center"><img class="h-8 w-8" src="image/transfer.png" alt="">
+                </div>
                 <p class="text-sm poppins-regular text-center">Transaction</p>
               </div>
-              </div>
-            </section>
-          </main>
-        </div>
+            </div>
+          </section>
+          <!-- 2nd Section -->
+          <section class="">
+            <div>
+              <h2 class="pb-3 text-md poppins-semibold tracking-wide">Recent Transaction</h2>
+              <p id="btn-view"></p>
+            </div>
+            <ul class="space-y-2 list bg-base-100">
+              <!-- Work on=============================================================================================== -->
+              <!-- ============================================================================================ -->
+              <li class="list-row border border-pink-300 rounded-xl shadow-md">
+                <div class="flex justify-center items-center"><img class="size-7 " src="image/file.png" />
+                </div>
+                <div>
+                  <div>Cash out</div>
+                  <div class="text-xs uppercase font-semibold opacity-60">$ <span>200</span></div>
+                </div>
+                <button class="rating flex justify-center items-center">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 h-5 w-5 bg-[#fc039c]"
+                    aria-label="1 star" />
+                </button>
+                <button class="btn border-none bg-transparent shadow-none" onclick="sendMoney_modal.showModal()">
+                  <img class="h-5" src="image/details.png" alt="">
+                </button>
+                <dialog id="sendMoney_modal" class="modal">
+                  <div class="modal-box w-2/12 poppins-regular space-y-1">
+                    <h3 class="poppins-semibold text-lg">Amount: <span class="text-[#fc039c] poppins-semibold-italic">$ </span><span class="text-black poppins-semibold-italic">200</span></h3>
+                    <p class="text-sm">Time: <span>9:00 PM</span></p>
+                    <p class="text-sm">Name: <span>Saif Ahamed</span></p>
+                    <p class="text-sm">Account: <span>895#########52</span></p>
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button
+                          class="btn poppins-medium bg-[#fc039c] text-white hover:bg-transparent hover:border-[#fc039c] hover:border-2 hover:text-[#fc039c]">Close</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
+              </li>
+              <li class="list-row flex justify-center items-center -mt-2">
+                <a href="./transaction.html" class="">
+                  <p class="poppins-medium text-xs">View All</p>
+                  <div class="flex justify-center items-center">
+                    <img class="h-2 w-2" src="./image/expand-button.png" alt="">
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </section>
+        </main>
       </div>
     </div>
-    <script src=""></script>
-  </body>
+  </div>
+  <script src=""></script>
+</body>
+
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Button Modal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      plugins: [tailwindcss.plugin(function ({ addComponents }) {
+        addComponents({
+          '.modal-backdrop': {
+            backdropFilter: 'blur(8px)',
+          },
+        });
+      })],
+    }
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.0/dist/full.css" rel="stylesheet" />
+</head>
+<body class="flex justify-center items-center h-screen bg-gray-100">
+
+  <!-- Image Button -->
+  <button class="btn btn-ghost" onclick="document.getElementById('my_modal').showModal()">
+    <img src="./image/details.png" alt="icon" class="w-12 h-12 rounded-full" />
+  </button>
+
+  <!-- Modal -->
+  <dialog id="my_modal" class="modal modal-backdrop">
+    <div class="modal-box text-white">
+      <h3 class="font-bold text-lg">Hello!</h3>
+      <p class="py-4">This is a modal with a blurry background effect.</p>
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn">Close</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+</body>
+</html>
